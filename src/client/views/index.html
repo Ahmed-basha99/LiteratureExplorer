@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <meta charset="utf-8">
+    <title>Literature Explorer</title>
+    <script src="https://kit.fontawesome.com/d8a74f0c60.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="upperLeftHeader">
+        <div class="popup" onclick="openPopup()"><b>?</b>
+            <span class="popup-text" id="myPopup">Welcome to the literature explorer! <br>
+                Click on a node to learn more about the paper, <br>
+                or double-click on a node to generate its graph.
+                <br> <br>
+                Click anywhere on this pop-up to close it.
+            </span>
+        </div>
+        <div class="logo">
+            <b>Literature Explorer</b>
+        </div>
+    </div>
+
+    <div class="slider">
+        <button id="prev" class="hidden">Prev</button>
+        <button id="next" class="hidden">Next</button>
+        <button id="userGraph" class = "btn2">Create User Graph</button>
+        <button id="Exit" class="hidden">Exit User Graph</button>
+        <select id="nodes" class="hidden"></select>
+        <button id="editmode" class="hidden">Edit Edges Mode</button>
+    </div>
+    <script>
+    </script>
+</header>
+<div id="graph"></div>
+<div class="navigation">
+    <ul>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa-solid fa-house"></i></span>
+                <span class="title">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <span class="title">Profile</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                <span class="title">Help</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                <span class="title">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:63342/Literature-Explorer/src/client/views/Register.html">
+                <span class="icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span>
+                <span class="title">Log in</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="toggle" onclick="toggleMenu()"></div>
+
+<main>
+    <section>
+        <div id="sidebar">
+            <button id="cbtn" class="closebtn" onclick="sidebarClose()"> <span style = "font-family: 'Playfair Display', serif; font-size: 18px;" > 
+                <span class="icon"><i class="fas fa-arrow-alt-circle-right fa-xl" aria-hidden="true"></i></span>
+                <span class="title"></span></span></button>
+            <button id="View-this-paper" class="view"> <span style = "font-family: 'Playfair Display', serif; font-size: 22px;" >View this paper</span></button>
+            <button id="Cite-this-paper" class="cite"> <span style = "font-family: 'Playfair Display', serif; font-size: 22px;" >Cite this paper</span></button>
+            <div class="paper-info">
+                <h1>
+                    <span style = "font-family: 'Playfair Display', serif; font-size: xx-large;" ><div id="paper-title"></div></span>
+                </h1>
+                <p>
+                <div id="paper-id"></div>
+                </p>
+                <p>
+                <div id="paper-authors"></div>
+                </p>
+                <p>
+                <div id="paper-date"></div>
+                </p>
+                <p>
+                <div id="paper-journal"></div>
+                </p>
+                <p>
+                <div id="paper-doi"></div>
+                </p>
+                <p>
+                <div id="paper-description"></div>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function openPopup() {
+        const popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+    function sidebarClose() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+    function toggleMenu() {
+        let navigation = document.querySelector('.navigation');
+        navigation.classList.toggle('active');
+        let toggle = document.querySelector('.toggle');
+        toggle.classList.toggle('active');
+    }
+</script>
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</body>
+</html>

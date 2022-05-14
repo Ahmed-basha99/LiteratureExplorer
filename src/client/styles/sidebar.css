@@ -1,0 +1,71 @@
+#sidebar {
+    border: 1px solid lightgray;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    background-color: #ede9da;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    right: 0;
+    top: 48px;
+    transition: 0.5s;
+}
+
+.paper-info {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+.closebtn {
+    border-color: #0000;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    background-color: #0000;
+    color: #555e4b;
+    cursor: pointer;
+    margin-left: 16px;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+}
+
+
+.closebtn:hover {
+    background: rgb(181, 181, 146);
+}
+
+.view, .cite {
+    border: 2px solid #87A980;
+    outline: none;
+    background: #bfaf8d;
+    color: black;
+    cursor: pointer;
+    margin-left: 20px;
+    width: 170px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+}
+
+.view {
+    margin-top: 500px;
+}
+
+.view:hover {
+    background: rgb(181, 181, 146);
+}
+
+.cite {
+    margin-top: 550px;
+}
+
+.cite:hover {
+    background: rgb(181, 181, 146);
+}

@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+main, section {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    transition: margin-right .5s;
+}
+
